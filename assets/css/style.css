@@ -1,0 +1,114 @@
+@font-face {
+    font-family: ADLAM;
+    src: url(../fonts/ADLaMDisplay-Regular.ttf);
+}
+
+* {
+    margin: 0 0;
+    padding: 0 0;
+    
+}
+
+
+.banner-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    background: black;
+    background-position: center;
+    background-size: cover;
+    margin-top: -10%;
+    
+
+    /* SHADOW  */
+    border:2px solid #f5e0e0;
+    box-shadow: 10px 120px 100px #a0a4d6;
+    
+ 
+
+    
+}
+
+.title-top{
+    font-family: ADLAM;
+    font-size: 5rem;
+    color: rgb(118, 164, 172);
+    /* Apply a simple text shadow */
+
+    text-shadow: 
+        12px 2px 14px rgba(173, 171, 171, 0.534),
+        -2px -2px 14px rgba(4, 58, 13, 0.5),
+        0 0 6px rgb(138, 130, 161);
+
+
+   
+}
+        
+        .title-top:hover {
+                animation: scale 2s ease-in-out infinite alternate;
+            }
+            
+            @keyframes scale {
+                0% {
+                    transform: scale(1);
+                }
+                100% {
+                    transform: scale(1.6);
+                }
+            }
+            
+    
+           
+               
+          
+
+.back-footer{
+    background-color: rgb(152, 206, 194);
+
+}
+
+.letrascima{
+    text-shadow: 
+    2px 2px 4px rgba(35, 172, 131, 0.733),
+    -2px -2px 1px rgba(8, 4, 58, 0.5),
+    0 0 6px rgba(87, 22, 207, 0.733);
+font-family: adlam;
+
+}
+.foma{
+    color: #e1e2eb;
+    font-family: adlam;
+    width: 35%;
+    margin-bottom: 25px;
+    border-radius: 13px;
+    background-color: rgba(137, 174, 206, 0.438);
+}
+.fantasicon{
+    animation: scale 1s ease-in-out infinite alternate;
+}
+@media(max-width:500px){
+    .title-top{
+        font-size: 250%;
+        font-weight: bold;
+    }
+    .foma{
+        color: #5ae9d677;
+        font-family: adlam;
+        width: 60%;
+        height: 10%;
+        border-radius: 13px;
+        background-color: rgba(168, 202, 231, 0.301);
+    }
+    .imagem-principal{
+        width: 100%;
+       
+    }
+    .letrascima{
+       color: #3e438b;
+    font-family: adlam;
+    
+    }
+    
+    
+}

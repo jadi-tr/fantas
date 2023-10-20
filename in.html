@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fumaça de Fantasma</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Theme Toggle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"> <!-- Include Font Awesome CSS -->
+
+</head>
+<body>
+    <div class="container">
+        <label class="switch">
+            <input type="checkbox" id="modeToggle">
+            <span class="slider round">
+                <i id="modeIcon" class="far fa-moon"></i> <!-- Moon icon for dark mode -->
+            </span>
+        </label>
+        <p id="modeText">Are you afraid of the dark?</p>
+    </div>
+
+    <script>
+        const modeToggle = document.getElementById("modeToggle");
+        const modeText = document.getElementById("modeText");
+        const modeIcon = document.getElementById("modeIcon");
+
+        modeToggle.addEventListener("change", () => {
+            if (modeToggle.checked) {
+                document.body.classList.add("dark-mode");
+                modeText.textContent = "Ghosts love the dark. Be careful.";
+                modeIcon.classList.remove("far", "fa-moon");
+                modeIcon.classList.add("fas", "fa-sun"); // Sun icon for light mode
+            } else {
+                document.body.classList.remove("dark-mode");
+                modeText.textContent = "Are you afraid of the dark?";
+                modeIcon.classList.remove("fas", "fa-sun");
+                modeIcon.classList.add("far", "fa-moon");
+            }
+        });
+    </script>
+<style>
+  /* body {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+  } */
+
+  .ghost {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: float 5s infinite;
+  }
+
+  .ghost::before, .ghost::after {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: puff 3s infinite;
+  }
+
+  .ghost::before {
+    width: 30px;
+    height: 30px;
+    top: 40%;
+    left: 10%;
+  }
+
+  .ghost::after {
+    width: 40px;
+    height: 40px;
+    top: 20%;
+    right: 10%;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes puff {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.3;
+    }
+    50% {
+      transform: scale(4.5);
+      opacity: 0;
+    }
+  }
+
+        body {
+            transition: background-color 0.5s, color 0.5s;
+        }
+        .container {
+            text-align: center;
+            margin-top: 100px;
+        }
+        /* Add your custom CSS styles for light and dark modes here */
+        /* For example: */
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="ghost">
+    <img src="assets/img/fantaskid.jpg" alt="">
+</div>
+
+</body>
+</html>
